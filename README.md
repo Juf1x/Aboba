@@ -64,6 +64,13 @@
 
 ![image](https://github.com/user-attachments/assets/87fc6075-709c-4f5b-a781-7389310c7732)
 
+Заходим в браузер по адресу localhost:3000 и вводим логин (Admin) и пароль (Admin)
+
+![image](https://github.com/user-attachments/assets/ad6f761c-5b60-4c2b-a876-db7b296c7855)
+
+
+
+
 
 
 
