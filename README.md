@@ -64,9 +64,28 @@
 
 ![image](https://github.com/user-attachments/assets/87fc6075-709c-4f5b-a781-7389310c7732)
 
-Заходим в браузер по адресу localhost:3000 и вводим логин (Admin) и пароль (Admin)
+Заходим в браузер по адресу `localhost:3000` и вводим логин (Admin) и пароль (Admin)
 
 ![image](https://github.com/user-attachments/assets/ad6f761c-5b60-4c2b-a876-db7b296c7855)
+
+С помощью команды `cd grafana_stack_for_docker` переходим в данный файл и заходим в конфигурационный файл докера с помощью команды `vi docker-compose.yaml`
+
+![image](https://github.com/user-attachments/assets/94d267e4-6e0d-4920-93cf-c485abd9160d)
+
+Запускаем grafana с помощью `sudo docker compose up -d`
+
+![image](https://github.com/user-attachments/assets/e0916bad-4890-4964-a45e-e10e02f9beff)
+
+Чтобы остановить grafana понадобится команда `sudo docker compose stop`
+
+![image](https://github.com/user-attachments/assets/1b245bbc-9f4e-4031-9ba2-8481bc312ebb)
+
+А чтобы полностью остановить grafana понадобится команда `sudo docker compose down`
+
+![image](https://github.com/user-attachments/assets/d594e222-d05c-4b0d-89a2-c3c655b83071)
+
+
+
 
 
 
