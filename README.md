@@ -37,6 +37,31 @@
 
 Скачиваем и устанавливаем последнюю версию Docker Compose с помощью команды 
 `sudo curl -L "https://github.com/docker/compose/releases/download/$COMVER/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose`
+
+Устанавливаем права на выполнение (делает файл исполняемым) 
+`sudo chmod +x /usr/bin/docker-compose и проверяем установленную версию docker c помощью команды docker --version`
+
+Проверка установленной версии Docker Compose
+`docker-compose --version`
+
+Клонируем репозиторий с github, где содержится Grafana с помощью команды 
+`git clone https://github.com/skl256/grafana_stack_for_docker.git`
+
+Переходим в директорию в Grafana с помощью команды `cd grafana_stack_for_docker`
+и создаем директори с помощью команды `sudo mkdir -p /mnt/common_volume/swarm/grafana/config`
+
+Все файлы и каталоги в указанных директориях будут переданы в собственность текущему пользователю и его группе
+`sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}`
+
+Файл grafana.ini уже существует, команда обновит его временные метки (время последнего доступа и изменения). Если файл не существует, команда создаст новый пустой файл с указанным именем по указанному пути.
+`touch /mnt/common_volume/grafana/grafana-config/grafana.ini`
+
+Копируем все файлы из директории config в `/mnt/common_volume/swarm/grafana/config/` c помощью команды `cp config/* /mnt/common_volume/swarm/grafana/config/`
+
+Переименовываем файл `grafana.yaml` в `docker-compose.yaml` с помощью `mv grafana.yaml docker-compose.yaml`
+
+
+
 ![image](https://github.com/user-attachments/assets/87fc6075-709c-4f5b-a781-7389310c7732)
 
 
