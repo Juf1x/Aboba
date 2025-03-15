@@ -5,32 +5,42 @@
 
 Гостевые дополнения Linux. Подобно гостевым дополнениям Windows, гостевые дополнения VirtualBox для Linux являются набором драйверов устройств и системных программ которые можно установлены в гостевой операционной системе.
 
-Первыми командами стали установка: wget
+Первыми командами стали установка: `wget`
 
-wget — это утилита командной строки для загрузки файлов с веб-серверов.
+`wget` — это утилита командной строки для загрузки файлов с веб-серверов.
 
 ![image](https://github.com/user-attachments/assets/ca80e968-5de1-4309-96f4-726c7dcc8915)
 
-и сам curl
+и сам `curl`
 
-curl — это утилита командной строки для передачи данных с или на сервер, поддерживающая множество протоколов, включая HTTP, HTTPS, FTP и другие.
+`curl` — это утилита командной строки для передачи данных с или на сервер, поддерживающая множество протоколов, включая HTTP, HTTPS, FTP и другие.
+
 ![image](https://github.com/user-attachments/assets/bdd182fb-d4f2-4c59-ae4c-fe30fb48b854)
 
 Установка файла репозитория Docker CE для CentOS
 ![image](https://github.com/user-attachments/assets/b4f66934-8a89-4d90-831e-9fd762242c31)
 
--P /etc/yum.repos.d/ — Указывает директорию, в которую будет сохранён загруженный файл.
+`-P /etc/yum.repos.d/` — Указывает директорию, в которую будет сохранён загруженный файл.
 
 Команда была выполнена, и файл Docker CE был загружен и сохранён в указанную директорию. Он необходим для настройки репозитория Docker, что позволит yum устанавливать пакеты Docker CE на нашу систему.
 
 Установка и настройку необходимых пакетов для работы с Docker
 ![image](https://github.com/user-attachments/assets/50b88a16-3f28-48cf-8010-ebdf160ce6d1)
 
-docker-ce — Основной пакет Docker Community Edition. docker-ce-cli — Командная строка Docker для управления Docker. containerd.io — Контейнерный рантайм, используемый Docker.
+`docker-ce` — Основной пакет Docker Community Edition. `docker-ce-cli` — Командная строка Docker для управления Docker. `containerd.io` — Контейнерный рантайм, используемый Docker.
 
 Эта команда позволяет использовать Docker для создания и управления контейнерами на системе.
 
+Убедимся в наличие пакета curl
 
-![image](https://github.com/user-attachments/assets/50b88a16-3f28-48cf-8010-ebdf160ce6d1)
+`COMVER=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)`
+
+Скачиваем и устанавливаем последнюю версию Docker Compose с помощью команды 
+`sudo curl -L "https://github.com/docker/compose/releases/download/$COMVER/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose`
+![image](https://github.com/user-attachments/assets/87fc6075-709c-4f5b-a781-7389310c7732)
+
+
+
+
 
 
