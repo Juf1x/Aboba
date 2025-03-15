@@ -60,7 +60,7 @@
 
 Переименовываем файл `grafana.yaml` в `docker-compose.yaml` с помощью `mv grafana.yaml docker-compose.yaml`
 
-
+Запускаем Docker Compose в фоновом режиме с помощью `sudo docker compose up -d`
 
 ![image](https://github.com/user-attachments/assets/87fc6075-709c-4f5b-a781-7389310c7732)
 
