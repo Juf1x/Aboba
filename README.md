@@ -88,6 +88,8 @@
 
 ![image](https://github.com/user-attachments/assets/d594e222-d05c-4b0d-89a2-c3c655b83071)
 
+# Prometheus
+
 Переходи в директорию `cd grafana_stack_for_docker/` и копируем конфигурационные файлы с `github sudo git clone https://github.com/Jufix/Aboba.git` 
 
 ![image](https://github.com/user-attachments/assets/53b95e9d-07bb-4a05-8038-0c8bf402f5ae)
@@ -140,6 +142,8 @@ Save
 
 ![image](https://github.com/user-attachments/assets/71d0f228-c899-40f2-85d3-7e45df1da47a)
 
+# Victoria
+
 Вводим команду echo -e "# TYPE light_metric1 gauge\nlight_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus которая, отправляет бинарные данные на локальный сервер, который слушает на порту 8428.
 
 ![image](https://github.com/user-attachments/assets/0180f155-9c4e-42ce-bd75-839f5d38c370)
@@ -148,13 +152,31 @@ Save
 
 ![image](https://github.com/user-attachments/assets/c43b53c5-34e2-4fb3-92fe-2cfec471bc19)
 
+Вписываем light_metric1 и нажимаем Execute Query
+
 ![image](https://github.com/user-attachments/assets/86b052b5-8927-491f-a52c-a79adad408a5)
+
+Переходим на http://localhost:3000 выбираем Dashboard и нажимаем New Dashboard, далее Add Visualization
 
 ![image](https://github.com/user-attachments/assets/8677b740-a90a-4e50-9146-32176ef7866b)
 
+Нажимаем Configure a new data source и выбираем Prometheus
+
+Вписываем:
+
+Name: vik
+
+Connection: http://victoriametrics:8428
+
+Нажимаем Save & Test
+
 ![image](https://github.com/user-attachments/assets/4a1b05e8-15f7-4b41-91d9-252f78e00b8d)
 
+Вписываем light_metric1
+
 ![image](https://github.com/user-attachments/assets/0f1936b2-732e-4421-992d-2017fd770709)
+
+Выходит панель с графиком, где есть активность light_metric1
 
 ![image](https://github.com/user-attachments/assets/21119a28-e827-40a3-bf25-e63429c96339)
 
