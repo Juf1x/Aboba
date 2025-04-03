@@ -96,9 +96,7 @@
 
 ![image](https://github.com/user-attachments/assets/25573ab6-df55-4cfc-a176-b88668780d4b)
 
-
-
-![image](https://github.com/user-attachments/assets/2f3f7f98-784d-4a18-a0fa-57e0f99deace)
+Копируем конфигурационный файл докера в папку с Grafan cp docker-compose.yaml /home/jufix/grafana_stack_for_docker/ и тоже самое делаем с файлом prometheuscp prometheus.yaml /home/jufix/grafana_stack_for_docker/
 
 ![image](https://github.com/user-attachments/assets/28e821f2-0049-4148-8a98-37eb50923616)
 
