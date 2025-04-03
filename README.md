@@ -1,4 +1,4 @@
-Для того, чтобы начать выполнять задания на Oracle Linux, в виртуальной машине нужно выставить некоторые характеристики: 
+![image](https://github.com/user-attachments/assets/37efc11f-1936-403a-a721-f6bc8026d81e)Для того, чтобы начать выполнять задания на Oracle Linux, в виртуальной машине нужно выставить некоторые характеристики: 
 2 ядра, 4096 МБ ОЗУ и при самой установке нашей операционной системы нужно выбрать Английский язык (потому что с другими могут быть беды)
 
 После установки Oracle Linux для полного комфорта пользования нужно накатить так называемые Guest Additions (в простонародье Гостевые дополнения)
@@ -89,6 +89,30 @@
 ![image](https://github.com/user-attachments/assets/25573ab6-df55-4cfc-a176-b88668780d4b)
 
 ![image](https://github.com/user-attachments/assets/2f3f7f98-784d-4a18-a0fa-57e0f99deace)
+
+![image](https://github.com/user-attachments/assets/28e821f2-0049-4148-8a98-37eb50923616)
+
+![image](https://github.com/user-attachments/assets/e3470469-273f-49c2-aed3-cc2bad4436c9)
+
+
+![image](https://github.com/user-attachments/assets/7da13f0f-385c-45c5-8c7a-40a874217525)
+
+![image](https://github.com/user-attachments/assets/07f4dec4-4605-411b-a274-266012a435c6)
+
+![image](https://github.com/user-attachments/assets/9b4aa78e-e5b3-4ceb-9206-9400a807f891)
+
+![image](https://github.com/user-attachments/assets/8fde00bc-7182-40e4-8a2f-db645c96993f)
+
+![image](https://github.com/user-attachments/assets/ebdaaf89-e29d-4470-bf78-4fff74cec0de)
+
+![image](https://github.com/user-attachments/assets/0a7b1fd8-2ba4-42ad-aed7-b15c2dc46e9a)
+
+![image](https://github.com/user-attachments/assets/71d0f228-c899-40f2-85d3-7e45df1da47a)
+
+
+
+
+
 
 
 
