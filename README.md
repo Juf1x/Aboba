@@ -96,28 +96,55 @@
 
 ![image](https://github.com/user-attachments/assets/25573ab6-df55-4cfc-a176-b88668780d4b)
 
-Копируем конфигурационный файл докера в папку с Grafan cp docker-compose.yaml /home/jufix/grafana_stack_for_docker/ и тоже самое делаем с файлом prometheuscp prometheus.yaml /home/jufix/grafana_stack_for_docker/
+Копируем конфигурационный файл докера в папку с Grafan `cp docker-compose.yaml /home/jufix/grafana_stack_for_docker/` и тоже самое делаем с prometheus `cp prometheus.yaml /home/jufix/grafana_stack_for_docker/`
 
 ![image](https://github.com/user-attachments/assets/28e821f2-0049-4148-8a98-37eb50923616)
 
+Переносим конфигурационный файл prometheus.yaml в конфиг Grafana, используя команду `mv prometheus.yaml /mnt/common_volume/swarm/grafana/config`
+
 ![image](https://github.com/user-attachments/assets/e3470469-273f-49c2-aed3-cc2bad4436c9)
 
+Проверяем наличие файла `ls`
 
 ![image](https://github.com/user-attachments/assets/7da13f0f-385c-45c5-8c7a-40a874217525)
 
+Были небольшие беды с localhost3000, еще раз ввел `sudo docker compose up -d`
+
 ![image](https://github.com/user-attachments/assets/07f4dec4-4605-411b-a274-266012a435c6)
+
+Перешел в Dashboards, затем создал его, выбрал Configure a new data source и сам Prometheus и ввел такие параметры `http://prometheus:9090`
 
 ![image](https://github.com/user-attachments/assets/9b4aa78e-e5b3-4ceb-9206-9400a807f891)
 
+Выбирем Basic authentication
+
+User: admin
+
+Password: admin
+
 ![image](https://github.com/user-attachments/assets/8fde00bc-7182-40e4-8a2f-db645c96993f)
+
+Save
 
 ![image](https://github.com/user-attachments/assets/ebdaaf89-e29d-4470-bf78-4fff74cec0de)
 
+Вписываем 1860 и жмем Load
+
+![изображение](https://github.com/user-attachments/assets/ede8ed91-e0fb-4097-8206-95086fd1e9d3)
+
+Нажимаем Import
+
 ![image](https://github.com/user-attachments/assets/0a7b1fd8-2ba4-42ad-aed7-b15c2dc46e9a)
+
+Открывается такой Dashboard для мониторинга загрузки ОС
 
 ![image](https://github.com/user-attachments/assets/71d0f228-c899-40f2-85d3-7e45df1da47a)
 
+Вводим команду echo -e "# TYPE light_metric1 gauge\nlight_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus которая, отправляет бинарные данные на локальный сервер, который слушает на порту 8428.
+
 ![image](https://github.com/user-attachments/assets/0180f155-9c4e-42ce-bd75-839f5d38c370)
+
+Переходим в браузере по ссылке http://localhost:8428/, открывается такое меню в нём нужно выбрать vmui
 
 ![image](https://github.com/user-attachments/assets/c43b53c5-34e2-4fb3-92fe-2cfec471bc19)
 
